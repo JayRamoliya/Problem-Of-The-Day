@@ -33,3 +33,37 @@ console.log(solution.getSecondLargest([12, 35, 1, 10, 34, 1])); // Output: 34
 console.log(solution.getSecondLargest([10, 10, 10])); // Output: -1
 console.log(solution.getSecondLargest([1, 2])); // Output: 1
 console.log(solution.getSecondLargest([5])); // Output: -1
+
+
+function second_trick(arr){
+    let n = arr.length
+
+    arr.sort((a,b)=>a-b)
+
+    for (let i = n-2; i >= 0; i--) {
+        console.log(i);
+        if (arr[i] !== arr[n-1]) {
+            return arr[i]
+        }        
+    }
+    return -1;
+}
+console.log(second_trick([1,2,35,133,143]));
+
+
+
+
+const arr = [12, 35, 1, 10, 34, 1];
+// const arr = [35, 10, 34];
+
+// ❌ const arr = [35, 35, 34];
+// const arr = [35, 34];
+
+// Sort the array in non-decreasing order
+// arr.sort((a, b) => a - b);
+arr.sort()
+
+console.log(arr[arr.length-2]); 
+console.log(typeof(arr[3]));
+
+
